@@ -1,10 +1,12 @@
-import { decorateIcons } from '../../scripts/aem.js';
+import {
+  decorateIcons
+} from '../../scripts/aem.js';
 
 export default function decorate(block) {
-    const slides = [...block.children];
-    let currentSlide = 0;
+  const slides = [...block.children];
+  let currentSlide = 0;
 
-    block.innerHTML = `
+  block.innerHTML = `
     <div class="carousel-container">
       <div class="carousel-slides">
         ${slides.map((slide) => `<div class="carousel-slide">${slide.innerHTML}</div>`).join('')}
@@ -17,38 +19,38 @@ export default function decorate(block) {
     </div>
   `;
 
-    const slideElems = block.querySelectorAll('.carousel-slide');
-    const dotElems = block.querySelectorAll('.carousel-dot');
-    const prevButton = block.querySelector('.carousel-prev');
-    const nextButton = block.querySelector('.carousel-next');
+  const slideElems = block.querySelectorAll('.carousel-slide');
+  const dotElems = block.querySelectorAll('.carousel-dot');
+  const prevButton = block.querySelector('.carousel-prev');
+  const nextButton = block.querySelector('.carousel-next');
 
-    function updateCarousel(newSlide) {
-        slideElems[currentSlide].classList.remove('active');
-        dotElems[currentSlide].classList.remove('active');
+  function updateCarousel(newSlide) {
+    slideElems[currentSlide].classList.remove('active');
+    dotElems[currentSlide].classList.remove('active');
 
-        currentSlide = newSlide;
+    currentSlide = newSlide;
 
-        slideElems[currentSlide].classList.add('active');
-        dotElems[currentSlide].classList.add('active');
-    }
+    slideElems[currentSlide].classList.add('active');
+    dotElems[currentSlide].classList.add('active');
+  }
 
-    dotElems.forEach((dot) => {
-        dot.addEventListener('click', () => {
-            updateCarousel(parseInt(dot.dataset.slide, 10));
-        });
+  dotElems.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      updateCarousel(parseInt(dot.dataset.slide, 10));
     });
+  });
 
-    prevButton.addEventListener('click', () => {
-        const newSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateCarousel(newSlide);
-    });
+  prevButton.addEventListener('click', () => {
+    const newSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel(newSlide);
+  });
 
-    nextButton.addEventListener('click', () => {
-        const newSlide = (currentSlide + 1) % slides.length;
-        updateCarousel(newSlide);
-    });
+  nextButton.addEventListener('click', () => {
+    const newSlide = (currentSlide + 1) % slides.length;
+    updateCarousel(newSlide);
+  });
 
-    // Initialize
-    updateCarousel(0);
-    decorateIcons(block);
+  // Initialize
+  updateCarousel(0);
+  decorateIcons(block);
 }
