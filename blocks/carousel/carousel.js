@@ -1,6 +1,4 @@
-import {
-  decorateIcons
-} from '../../scripts/aem.js';
+import { decorateIcons } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   const slides = [...block.children];
