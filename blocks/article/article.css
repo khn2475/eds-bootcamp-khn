@@ -1,0 +1,54 @@
+.article-content {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f4f4f4;
+}
+
+.article-image {
+    flex: 1 1 50%;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.article-image picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-text {
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article-text h1,
+.article-text h2,
+.article-text h3,
+.article-text h4,
+.article-text h5,
+.article-text h6 {
+    margin-top: 0;
+}
+
+.article-text p {
+    margin: 20px 0;
+    font-size: 14px;
+    /* Reduced font size */
+}
+
+.article-text a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.article-text a.button:hover {
+    background-color: darkorange;
+}
