@@ -23,16 +23,13 @@ header .nav-brand {
   font-size: 28px;
   font-weight: bold;
   color: #000;
-  /* Ensure the brand color is black */
   font-family: 'Arial Black', sans-serif;
-  /* Match the font styling */
 }
 
 header .nav-sections {
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
-  /* Align sections to the right */
 }
 
 header .nav-sections ul {
@@ -44,14 +41,10 @@ header .nav-sections ul {
 
 header .nav-sections ul li {
   font-size: 12px;
-  /* Reduce font size of nav links */
   font-weight: 500;
   padding: 15px 20px;
-  /* Increase padding to create larger rectangular area */
   transition: background-color 0.3s ease;
-  /* Add transition effect */
   font-family: Arial, sans-serif;
-  /* Match the font styling */
 }
 
 header .nav-sections ul li a {
@@ -61,7 +54,6 @@ header .nav-sections ul li a {
 
 header .nav-sections ul li:hover {
   background-color: yellow;
-  /* Background color on hover */
 }
 
 header .nav-tools {
@@ -69,7 +61,6 @@ header .nav-tools {
   display: flex;
   align-items: center;
   padding-left: 32px;
-  /* Add padding between nav links and search bar */
 }
 
 header .nav-tools .search {
