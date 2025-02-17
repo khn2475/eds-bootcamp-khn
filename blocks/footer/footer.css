@@ -1,15 +1,12 @@
 footer {
   background-color: black;
-  /* Set background color to black */
   color: white;
-  /* Set text color to white */
   font-size: var(--body-font-size-xs);
 }
 
 .footer-content {
   max-width: 1200px;
   margin: auto 24px;
-  /* Add left and right margins */
   padding: 40px 0 24px;
 }
 
@@ -40,14 +37,12 @@ footer {
 
 .footer-social a {
   background-color: lightgrey;
-  /* Set background color to grey for social links */
   padding: 5px;
   text-decoration: none;
 }
 
 .footer-bottom a {
   color: white;
-  /* Set link color to white */
 }
 
 .footer-top nav ul li a {
@@ -57,12 +52,10 @@ footer {
 
 .footer-bottom a:hover {
   color: lightgray;
-  /* Set link hover color to light gray */
 }
 
 .footer-top nav ul li a:hover {
   text-decoration: underline;
-  /* Underline links on hover */
 }
 
 .footer-social {
@@ -91,7 +84,6 @@ footer {
 @media (width >=900px) {
   .footer-content {
     margin: auto 32px;
-    /* Update left and right margins for larger screens */
     padding: 40px 0 24px;
   }
 }
