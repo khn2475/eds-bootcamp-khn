@@ -15,11 +15,14 @@ export default function decorate(block) {
     const articleImage = document.createElement('div');
     articleImage.classList.add('article-image');
 
+    const pattr = document.createElement('p');
+
     articleImage.appendChild(image);
     articleText.appendChild(featuredText);
     articleText.appendChild(title);
     articleText.appendChild(description);
-    articleText.appendChild(button);
+    pattr.appendChild(button);
+    articleText.appendChild(pattr);
 
     articleContent.appendChild(articleImage);
     articleContent.appendChild(articleText);
