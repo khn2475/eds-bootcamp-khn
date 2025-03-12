@@ -3,9 +3,14 @@
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  const header = document.createElement('header');
+  const topBar = document.createElement('div');
+  topBar.classList.add('header-topbar');
+  block.prepend(topBar);
+  topBar.innerHTML = '<div><a>Sign In</a></div><div class="header-markets"><span class="icon icon-flag-us"></span>EN-US<span class="header-chevron-down"></span></div>';
   const nav = document.createElement('nav');
-  header.append(nav);
+  block.append(nav);
+  const navWrapper = document.createElement('div');
+  navWrapper.className = 'nav-wrapper';
 
   // Brand
   const brand = document.createElement('div');
@@ -51,7 +56,6 @@ export default async function decorate(block) {
   tools.append(search);
 
   // Append all to nav
-  nav.append(brand, sections, tools);
-
-  block.append(header);
+  navWrapper.append(brand, sections, tools);
+  nav.append(navWrapper);
 }

@@ -254,3 +254,11 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+.default-content-wrapper h2:after {
+  border-bottom: 2px solid var(--brandPrimary, #ffea00);
+  content: "";
+  display: block;
+  padding-top: 8px;
+  width: 84px;
+}

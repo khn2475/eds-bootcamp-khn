@@ -1,22 +1,19 @@
 /* header and nav layout */
 header .nav-wrapper {
+  float: unset !important;
+  margin: 0 auto;
+  padding: 0 14px;
   background-color: white;
   width: 100%;
   z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  top: 25px;
 }
 
-header nav {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1248px;
-  margin: 20px 0;
-  padding: 0 24px;
-}
+header nav {}
 
 header .nav-brand {
   flex: 0 1 auto;
@@ -24,12 +21,14 @@ header .nav-brand {
   font-weight: bold;
   color: #000;
   font-family: 'Arial Black', sans-serif;
+  width: 16.6666666667%;
 }
 
 header .nav-sections {
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
+  width: 66.6666666667%;
 }
 
 header .nav-sections ul {
@@ -61,6 +60,7 @@ header .nav-tools {
   display: flex;
   align-items: center;
   padding-left: 32px;
+  width: 16.6666666667%;
 }
 
 header .nav-tools .search {
@@ -88,4 +88,58 @@ header .nav-tools .search img {
   width: 20px;
   height: auto;
   cursor: pointer;
+}
+
+header .header-topbar {
+  height: 25px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  padding: 0 16px;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  left: 0;
+}
+
+header .header-topbar .icon {
+  height: 24px;
+  width: 34px;
+  margin-right: 6px;
+}
+
+header .header-chevron-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px
+}
+
+header .header-chevron-down::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  transform: rotate(45deg);
+  left: 4px;
+  top: 2px
+}
+
+header .header-markets {
+  display: flex;
+  align-items: center;
+}
+
+header .header-topbar .icon svg {
+  height: 100%;
 }
