@@ -6,7 +6,7 @@ export default async function decorate(block) {
   const topBar = document.createElement('div');
   topBar.classList.add('header-topbar');
   block.prepend(topBar);
-  topBar.innerHTML = '<div><a>Sign In</a></div><div class="header-markets"><span class="icon icon-flag-us"></span>EN-US<span class="header-chevron-down"></span></div>';
+  topBar.innerHTML = '<div class="register-nav-header"><div><a href="/form">Sign In</a></div><div class="header-markets"><span class="icon icon-flag-us"></span>EN-US<span class="header-chevron-down"></span></div></div>';
   const nav = document.createElement('nav');
   block.append(nav);
   const navWrapper = document.createElement('div');
